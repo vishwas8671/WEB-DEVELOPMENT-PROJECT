@@ -3,67 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Virtual Dressing Room</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+  <style>
+    .main {
+      width: 300px;
+      height: 300px;
+      background-color: red;
+    }
+    #parent-row-1 {
+      width: 300px;
+      height: 150px;
+      background-color: yellow;
+    }
+    #parent-row-2 {
+      width: 300px;
+      height: 150px;
+      background-color: blue;
+    }
+    .col1 {
+      width: 150px;
+      height: 150px;
+      background-color: green;
+      float: left;
+    }
+    .col2 {
+      width: 150px;
+      height: 150px;
+      background-color: red;
+      float: left;
+    }
+  </style>
 </head>
 <body>
-  <!-- Login Interface -->
-  <div id="login-container">
-    <h2>Login</h2>
-    <form id="login-form">
-      <input type="email" id="email" placeholder="Email" required>
-      <input type="password" id="password" placeholder="Password" required>
-      <button type="submit">Login</button>
-    </form>
-    <p>Don't have an account? <a href="#" id="signup-link">Sign Up</a></p>
+  <div class="main">
+    <div id="parent-row-1">
+      <div class="col1">
+        Home
+      </div>
+      <div class="col2">
+        About
+      </div>
+    </div>
+    <hr>
+    <div id="parent-row-2">
+      <div class="col1">
+        Gallery
+      </div>
+      <div class="col2">
+        Contact
+      </div>
+    </div>
   </div>
-
-  <!-- Signup Interface -->
-  <div id="signup-container" class="hidden">
-    <h2>Sign Up</h2>
-    <form id="signup-form">
-      <input type="text" id="username" placeholder="Username" required>
-      <input type="email" id="signup-email" placeholder="Email" required>
-      <input type="password" id="signup-password" placeholder="Password" required>
-      <button type="submit">Sign Up</button>
-    </form>
-    <p>Already have an account? <a href="#" id="login-link">Login</a></p>
-  </div>
-
-  <!-- Filter and Upload Section -->
-  <div id="filter-container" class="hidden">
-    <h2>Apply Filters</h2>
-    <form id="filter-form">
-      <label for="gender">Gender:</label>
-      <select id="gender">
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-      </select>
-      
-      <label for="age-group">Age Group:</label>
-      <select id="age-group">
-        <option value="0-5">0-5</option>
-        <option value="5-15">5-15</option>
-        <option value="15-25">15-25</option>
-        <option value="25-45">25-45</option>
-        <option value="45-70">45-70</option>
-      </select>
-
-      <label for="cloth-type">Cloth Type:</label>
-      <select id="cloth-type">
-        <option value="tshirt">T-Shirt</option>
-        <option value="jeans">Jeans</option>
-        <option value="shirt">Shirt</option>
-        <option value="dailywear">Daily Wear</option>
-      </select>
-
-      <label for="image-upload">Upload Your Image:</label>
-      <input type="file" id="image-upload" accept="image/*">
-      <button type="submit">Submit</button>
-    </form>
-    <div id="result-container"></div>
-  </div>
-
-  <script src="script.js"></script>
+  
+  <h3>Hello</h3>
+  
 </body>
 </html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <h2><u>LOGIN PAGE</u></h2>
+    </center>
+    <fieldset>
+      <form action="">
+        Name :
+        <input
+          type="text"
+          name="name"
+          id="Name"
+          required=""
+          placeholder="Enter your name"
+          value="Vishwas"
+          readonly
+        />
+        <br /><br />
+        Father's name : <input type="text" maxlength="20" /> <br /><br />
+        Address :
+        <textarea
+          name="Address"
+          id="Address"
+          placeholder="Enter your Address"
+        ></textarea>
+        <br /><br />
+        Gender : <input type="radio" name="gender" id="Male" />Male
+        <input type="radio" name="gender" id="Female" />Female
+        <input type="radio" name="gender" id="other" />Other <br />
+        <br />
+        Age : <input type="number" min="10" max="25" /> <br /><br />
+        Country :
+        <select name="Country" id="country">
+          <option value="INDIA">India</option>
+          <option value="USA">USA</option>
+          <option value="CHINA">CHINA</option>
+          <option value="RUSSIA">RUSSIA</option>
+          <option value="Bangladesh">Bangladesh</option>
+        </select>
+        <br />
+        <br />
+        Hobbies : <input type="checkbox" name="check" checked />Dancing
+        <input type="Checkbox" name="check" />Playing
+        <input type="Checkbox" />Cooking <br />
+        <br />
+        Image : <input type="file" name="image" /> <br />
+        <br />
+        Range : <input type="range" /> <br /><br />
+        <input
+          type="submit"
+          value="Send"
+          name="submit"
+          style="background-color: yellow"
+          id="submit"
+        />
+        <input type="submit" value="reset" name="reset" id="reset" />
+      </form>
+    </fieldset>
+  </body>
+</html>
