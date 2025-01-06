@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var score = prompt("Enter value of a : ");
+     {
+      if (score > 60) {
+          return "Pass";
+      } else if (score >= 45 && score <= 60) {
+          return "Average";
+      } else if (score < 33) {
+          return "Fail";
+      } else {
+          return "Invalid score";
+      }
+  }
+  let studentScore = 55;
+  let grade = getGrade(studentScore);
+  console.log("The grade is: " + grade);
+  </script>
+</body>
+</html>

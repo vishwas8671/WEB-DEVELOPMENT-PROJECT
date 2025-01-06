@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h2>User Registration Form</h2>
+    <form id="registrationForm" onsubmit="return validateForm()">
+        <!-- Name Field -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <div id="nameError" class="error"></div><br><br>
+        <!-- Email Field -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <div id="emailError" class="error"></div><br><br>
+        <!-- Age Field -->
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age">
+        <div id="ageError" class="error"></div><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        // Form validation function
+        function validateForm() {
+            let isValid = true;
+            // Clear previous error messages
+            document.getElementById('nameError').textContent = '';
+            document.getElementById('emailError').textContent = '';
+            document.getElementById('ageError').textContent = '';
+            // Name validation
+            const name = document.getElementById('name').value;
+            if (name.trim() === '') {
+                document.getElementById('nameError').textContent = 'Name is required.';
+                isValid = false;
+            }
+            // Email validation
+            const email = document.getElementById('email').value;
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (email.trim() === '') {
+                document.getElementById('emailError').textContent = 'Email is required.';
+                isValid = false;
+            } else if (!emailPattern.test(email)) {
+                document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+                isValid = false;
+            }
+            const mobile no. = document.getElementById('age').value;
+            if (age.trim() === '') {
+                document.getElementById('ageError').textContent = 'Age is required.';
+                isValid = false;
+            } else if (isNaN(age) || age < 18 || age > 120) {
+                document.getElementById('ageError').textContent = 'Please enter a valid age between 18 and 120.';
+                isValid = false;
+            }
+            // Age validation
+            const age = document.getElementById('age').value;
+            if (age.trim() === '') {
+                document.getElementById('ageError').textContent = 'Age is required.';
+                isValid = false;
+            } else if (isNaN(age) || age < 18 || age > 120) {
+                document.getElementById('ageError').textContent = 'Please enter a valid age between 18 and 120.';
+                isValid = false;
+            }
+            return isValid; // Prevent form submission if validation fails
+        }
+    </script>
+</body>
+</html>
