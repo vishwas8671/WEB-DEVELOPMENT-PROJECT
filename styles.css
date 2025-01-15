@@ -1,40 +1,75 @@
+/* styles.css */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f4f4f4;
+}
+
+.resume-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #f3f3f3;
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.hidden {
-  display: none;
+.sidebar {
+  background-color: black;
+  color: #fff;
+  padding: 20px;
+  width: 30%;
+  text-align: center;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.profile-pic img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
 }
 
-input, select, button {
-  padding: 10px;
-  font-size: 16px;
+.name {
+  margin: 10px 0;
 }
 
-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
+.role {
+  font-size: 1.2em;
+  color: #ffcc00;
 }
 
-button:hover {
-  background-color: #0056b3;
+.contact-details,
+.education,
+.skills {
+  margin-top: 20px;
+  text-align: left;
 }
 
-#result-container {
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  margin-bottom: 10px;
+}
+
+.main-content {
+  padding: 20px;
+  width: 70%;
+}
+
+.main-content h3 {
+  border-bottom: 2px solid #ffcc00;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.job {
+  margin-bottom: 20px;
+}
+
+.references {
   margin-top: 20px;
 }
